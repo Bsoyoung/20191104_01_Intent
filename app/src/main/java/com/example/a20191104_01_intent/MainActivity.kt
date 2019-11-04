@@ -72,6 +72,12 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        googleMapBtn.setOnClickListener {
+            var uri = Uri.parse("geo:49.129,109.924") //위도, 경도값 대입
+            var intent = Intent(Intent.ACTION_VIEW,uri)
+            startActivity(intent)
+
+        }
 
     }
 

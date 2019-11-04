@@ -85,4 +85,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="카카오톡 앱 다운 화면 이동"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/googleMapBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="간략한 구글 지도 보여주기"/>
 </LinearLayout>
