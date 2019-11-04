@@ -3,6 +3,7 @@ package com.example.a20191104_01_intent
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_edit_user_info.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,24 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if(requestCode == 1000){
+            if(resultCode == RESULT_OK){
+
+                var inputNameData = data?.getStringExtra("inputName")
+
+                inputNameData?.let {
+
+                    nameTxt.text = it                }
+
+            }
+        }
+
 
     }
 }
